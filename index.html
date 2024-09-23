@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+   
+    <div id="resultContainer">
+
+    </div>
+
+    <div id="inputUser">
+        <p><b>EJERCICIO 5</b></p>
+        <label for="cars">Selecciona un Vehiculo:</label>
+        <select name="cars" id="cars" onChange="Ejercicio5()">
+            <option value="">No Selected</option>
+            <option value="FORD FIESTA">FORD FIESTA</option>
+            <option value="FORD FOCUS">FORD FOCUS</option>
+            <option value="FORD ESCAPE">FORD ESCAPE</option>
+        </select>
+        <div id="resultExercise5"></div>
+    </div>
+
+    <div id="inputUser2">
+        <p><b>EJERCICIO 6</b></p>
+        <label for="origen">Seleccione el Origen:</label>
+        <select name="origen" id="origen">
+            <option value="">La Palma</option>
+        </select>
+        <label for="destino">Seleccione el Destino:</label>
+        <select name="destino" id="destino" onChange="Ejercicio6()">
+            <option value="">No Selected</option>
+            <option value="La costa del Sol">La costa del Sol</option>
+            <option value="Panchimalco">Panchimalco</option>
+            <option value="Puerto El Triunfo">Puerto El Triunfo</option>
+        </select>
+        <div id="resultExercise6"></div>
+    </div>
+
+    <div id="inputUser3"></div>
+        <p><b>EJERCICIO 7</b></p>
+        <label for="valoresNum">Digite los 10 valores separados por comas.</label>
+        <input type="text" id="valores" />
+        <button type="button" onClick="Ejercicio7()">Procesar</button>
+        <div id="resultExercise7"></div>
+    </div>
+
+    <div id="inputUser4">
+        <p><b>EJERCICIO 8</b></p>
+        <label for="inputMultiplicar">Digite el Numero para mostrar la tabla de multiplicar del 1 al 10:</label>
+        <input type="text" id="numeroMultiplicar" />
+        <button type="button" onClick="Ejercicio8()">Mostrar Tabla</button>
+        <div id="resultExercise8"></div>
+    </div>
+
+    <div id="inputUser5">
+        <p><b>EJERCICIO 9</b></p>
+        <label for="tempCelsiusLb">Digite la temperatura en Celsius:</label>
+        <input type="text" id="tempCelsius" />
+        <button type="button" onClick="Ejercicio9()">Mostrar Tabla</button>
+        <div id="resultExercise9"></div>
+    </div>
+
+    <div id="inputUser6">
+        <p><b>EJERCICIO 10</b></p>
+
+        <div id="PromedioMayor"></div>
+
+        <label for="Morning"><b>Turno Mañana:</b></label>
+        <div id="inputContainerMorning"></div>
+        <div id="resultadoContainerMorning"></div>
+
+        <label for="Afternoon"><b>Turno Tarde:</b></label>
+        <div id="inputContainerAfternoon"></div>
+        <div id="resultadoContainerAfternoon"></div>
+
+        <label for="Nigth"><b>Turno Noche:</b></label>
+        <div id="inputContainerNigth"></div>
+        <div id="resultadoContainerNigth"></div>
+
+        <button type="button" onClick="Ejercicio10()">Procesar Resultados</button>  
+        <!-- <input type="text" id="tempCelsius" />
+        <button type="button" onClick="Ejercicio9()">Mostrar Tabla</button>
+        <div id="resultExercise9"></div> -->
+    </div>
+
+
+
+    <script src="/assets/controlstructure.js"></script>
+    <script>
+
+        //Llamada de Funciones, estas funciones contienen parametros ya definidos.
+        printResultsHTML("Ejercicio1", 21);
+    
+        const infoAlumno = {
+            Nombre:"Josh Palacios",
+            Carnet:"12345",
+            NotaExamen:8,
+            NotaTareas:7,
+            NotaAsistencia:9,
+            NotaInvestigacion:8
+            };
+            
+        printResultsHTML("Ejercicio2", infoAlumno);
+    
+        const infoTrabajador = {
+            Nombre:"Josh Palacios",
+            Salario:1100,
+            Categoria:"A"
+            };
+        
+        printResultsHTML("Ejercicio3", infoTrabajador);
+    
+        const arrayNum = [15,25];
+    
+        printResultsHTML("Ejercicio4", arrayNum);
+
+
+        generateInputs('inputContainerMorning',5);
+        generateInputs('inputContainerAfternoon',6);
+        generateInputs('inputContainerNigth',11);
+    
+    
+    </script>
+</body>
+</html>
